@@ -1,0 +1,90 @@
+1.  How to create a custom react hook?
+ans: 
+    
+
+2.What is spread operator and when to use it?
+ans: 
+    spread operator is use to iterate the every element of an array, string or object.
+    it is introduced in ES6.
+    it is used by ...
+    I use sperad operator to cancat two array and deep copy of any variable or array.
+    If you want to console the array so you can use also use spread operator. 
+    eg:- let arr=[1,2,3,4,5];  console.log(arr).
+
+
+3.How to fetch parallel requests in axios?
+ans:
+    To use axios, first we need to install third party package using npm i axios.
+    after that we can import it, using import axio from 'axios'.
+    normally we are sening one req at a time but in case you want to send more than one request so you can use axios.all().
+    for example: 
+        let req1 = axios.get('http://localhost:8080/one');
+        let req2 = axios.get('http://localhost:8080/two');
+        axios.all([reqOne, reqTwo])
+        .then(axios.spread((…res) => {
+            console.log(res[0]);
+            console.log(res[1]);
+        }
+
+
+4.What are the advantages of useRef hook?
+ans:
+    useRef hook is the hook, that allows to directly create a refrence to the DOM element in the functional component.
+    useRef return a mutable reference object, this object has property .current.
+    we can change style,text,etc using useRef hook using .current.
+
+
+5.What is the use of react-router-dom <Outlet /> component?
+ans:
+    react-router-dom is use to create route in react app.
+    it a third party library. 
+    npm i react-router-dom is use to intall that package.
+
+
+6.What is async and await in node js?
+ans:
+    it is use to handle the asynchronous operation in js.
+    node.js is single threaded so handle asynchronous operation we use async function and using await keywod we can give the order to the function you have to wait untill last await is resolved.
+
+
+7.What callback function?
+ans:
+    callback function is also use to handle the asynchronous operation, but in case of nested callback it is becoming callback hell.
+    or we can say that function which is passing as an argument or returning fron a higher order function.
+
+
+8.How to reference documents from other collections in mongodb?
+ans:
+    I used jwt token to reference documents from other collections in mongodb.
+    but we can use -id also.
+    for example: we have two collection A and B, so we can pass A's _id inside the B and then using _id we can access B data with refrence to A data.
+
+
+9.How to create custom middleware in express?
+ans:
+    const middleware=(req,res,next)=>{
+        //some code need to write
+        next();
+    }
+
+    we can use this middleware in whole application or a specific route using app.use(middleware) or app.get('',middleware,(req,res)=>{})
+
+10.How to send multiple response in express?
+ans:
+    we can create multiple route using express.
+    app.get('/home',(req,res)=>{
+        res.send("hi")
+    });
+    app.post('/contact',(req,res)=>{
+
+    });
+
+
+11.What is the difference between development environment and production environment?
+12.What is production build?
+13.What is stashing in git?
+ans: 
+    it is used to take copy of the repo and we can use it later if change is occured.
+    
+14.How to make the MUI <Grid /> component responsive?
+15.Which prop is used in the MUI <Menu /> component to disable scroll lock?
